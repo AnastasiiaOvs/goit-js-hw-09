@@ -16,3 +16,103 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  padding: 24px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+}
+
+.gallery-item {
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.04);
+}
+
+.gallery-link {
+  display: block;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 0 solid transparent;
+  box-sizing: border-box;
+}
+
+.feedback-form {
+  max-width: 408px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  box-shadow: 0px 4px 16px rgba(46, 47, 66, 0.08);
+  background-color: #ffffff;
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 16px;
+  color: #2e2f42;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #d3d3d3;
+  margin-top: 8px;
+  resize: none;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  outline: 1px solid #2E2F42;
+  border-color: transparent;
+}
+
+.feedback-form textarea {
+  min-height: 80px;
+}
+
+.feedback-form button {
+  font-family: 'Montserrat', sans-serif;
+  align-self: flex-start;
+  padding: 8px 16px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 250ms ease;
+}
+
+.feedback-form button:hover,
+.feedback-form button:focus {
+  background-color: #6c8cff;
+}
